@@ -14,7 +14,6 @@ const menuSlide = () => {
       }
     });
     mobileMenu.classList.toggle('close');
-
   });
 }
 

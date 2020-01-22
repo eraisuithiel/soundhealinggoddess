@@ -1,0 +1,304 @@
+@import './_variables';
+
+/*  Core HTML */ 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  margin: 0 0 10px 0;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+h1 {
+  margin: 0px 0px 25px 0;
+}
+
+h2 {
+  margin: 0px 0px 25px 0;
+  color: $dark-color;
+}
+
+h3 {
+  margin: 0px 0px 15px 0;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: $main-font;
+}
+
+/*  Navigation */ 
+
+nav {
+  display: flex;
+  width: 100%;
+  min-height: 50px;
+  height: 5vh;
+  background-color: $dark-color;
+  padding: 0px 25px;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+}
+
+nav a {
+  line-height: 50px;
+  display: flex;
+  color: #FFFFFF;
+  padding: 0px 25px;
+  justify-content: center;
+}
+
+.nav-links li a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover {
+  color: $hover-color;
+}
+
+.current {
+  background-color: $medium-color;
+}
+
+.cta-fb {
+  background-color: $link-color;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  right: 25px;
+}
+
+.mobile-menu div {
+  width: 30px;
+  height: 2px;
+  background-color: #FFFFFF;
+  margin: 5px 0;
+  transition: all 0.3s ease-in;
+}
+
+.mobile-menu:hover div {
+  background-color: $hover-color;
+}
+
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.close .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.close .line2 {
+  opacity: 0;
+}
+.close .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Logo */
+
+#logo {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $dark-color;
+  font-weight: 600;
+  font-size: 2.2em;
+}
+
+/* Hero Image */
+
+#hero {
+  background: $dark-color;
+  color: $text-color;
+  padding: 50px;
+  display: flex;
+}
+
+.musicbg {
+  height: 250px;
+  width: 250px;
+  margin: auto;
+}
+
+#hero p a {
+  color: $link-color;
+}
+
+.hero-text {
+  margin-left: 50px;
+}
+
+/* Buttons */
+
+.button {
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 5px;
+  margin-right: 25px;
+}
+
+.fb {
+  background-color: $medium-color;
+}
+
+.more {
+  background-color: $link-color;
+
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px 0px 0px;
+}
+
+/* Content */
+
+#content {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  margin-bottom: 50px;
+}
+
+.small-container {
+  width: 65%;
+  margin-right: 50px;
+}
+
+.events {
+  width: 35%;
+  min-width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fb-wrapper div {
+  width: 350px;
+}
+
+/* Footer */
+
+footer {
+  color: $text-color;
+  background-color: $dark-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 25px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.8em;
+
+}
+
+footer a {
+  color: $link-color;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  h1, h2, h3 {
+    text-align: center;
+  }
+  .nav-links {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 100%;
+    height: 95vh;
+    background-color: $dark-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    align-items: stretch;
+  }
+
+  .mobile-menu {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+  #hero {
+    flex-direction: column;
+  }
+  .hero-text {
+    margin: 50px 0px 0px 0px;
+  }
+  #content {
+    flex-direction: column;
+  }
+  .small-container, .events {
+    width: 100%;
+    margin-right: 0px;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer div, footer ul {
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .button-container {
+    flex-direction: column;
+  }
+  .button-container a {
+    text-align: center;
+  }
+}
+
