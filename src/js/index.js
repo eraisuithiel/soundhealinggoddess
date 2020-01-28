@@ -1,20 +1,10 @@
-const menuSlide = () => {
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links li');
+import './../sass/styles.scss';
+import nav from './nav';
+import contactForm from './contactForm';
 
-  mobileMenu.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
-    
-    navLinks.forEach((link, index) => {
-      if(link.style.animation){
-        link.style.animation = '';
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-      }
-    });
-    mobileMenu.classList.toggle('close');
-  });
+nav();
+
+if(document.querySelector('#submit-btn')){
+  const submit = document.querySelector('#submit-btn');
+  submit.addEventListener('click', contactForm);
 }
-
-menuSlide();
