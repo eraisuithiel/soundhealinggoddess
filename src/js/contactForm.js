@@ -104,6 +104,8 @@ const contactForm = (event) => {
     submitMsg.className = 'submit-msg';
     submitMsg.innerText = msg.submitMsg;
     subBtnContainer.removeChild(subBtn);
+    const submit = document.querySelector('#contact-form');
+    submit.submit();
   }
 
   // If all fields are correct, submit message
