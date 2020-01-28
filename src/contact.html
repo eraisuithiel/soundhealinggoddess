@@ -38,7 +38,12 @@
       <div class="full-container">
         <h2>Contact Form</h2>
         <div>
-          <form name="contact" id="contact-form" data-netlify="true">
+          <form 
+            name="contact" 
+            id="contact-form" 
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+          >
             <label>
               Name (Required):
               <input type="text" name="name" id="contact-name" />
@@ -72,6 +77,9 @@
               <textarea name="message" placeholder="Type message here..." id="contact-message"></textarea>
               <div id="messageMsg"></div>
             </label>
+            <div data-netlify-recaptcha="true">
+
+            </div>
             <div id="submit-btn-container">
               <button type="button" id="submit-btn" class="button more">Send</button>
             </div>
