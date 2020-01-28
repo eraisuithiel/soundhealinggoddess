@@ -67,7 +67,7 @@ const contactForm = (event) => {
       // Checks for special Characters in Name and Message Fields 
 
       if (field.type === 'text' || field.type === 'textarea') {
-        const specialChars = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+        const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
         if (specialChars.test(value)) {
           errorMsg(fieldErrors, msg.spChars);
           return false;
