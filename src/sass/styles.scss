@@ -327,6 +327,14 @@ article {
   font-weight: bold;
 }
 
+.recaptcha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
 /* Footer */
 
 footer {
