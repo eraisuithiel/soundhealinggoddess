@@ -148,7 +148,10 @@ a:hover {
 /* Hero Image */
 
 #hero {
-  background: $dark-color;
+  background-image: url(../img/star-bg-purple2.png);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-color: $dark-color;
   color: $text-color;
   padding: 50px;
   display: flex;
@@ -199,6 +202,8 @@ a:hover {
   display: flex;
   flex-direction: row;
   padding: 20px 0px 0px 0px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Content */
@@ -446,6 +451,7 @@ footer p {
     flex-direction: column;
   }
   .button-container a {
+    margin: 10px;
     text-align: center;
   }
   .product {
