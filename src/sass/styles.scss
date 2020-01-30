@@ -43,9 +43,12 @@ h1, h2, h3 {
 
 #container {
   width: 100%;
+  min-width: 400px;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   font-family: $main-font;
+
 }
 
 /*  Navigation */ 
@@ -58,6 +61,7 @@ nav {
   background-color: $dark-color;
   padding: 0px 25px;
   align-items: center;
+  position: fixed;
 }
 
 .nav-links {
@@ -97,6 +101,7 @@ a:hover {
   display: none;
   position: absolute;
   right: 25px;
+  z-index: 2;
 }
 
 .mobile-menu div {
@@ -142,7 +147,8 @@ a:hover {
   align-items: center;
   color: $dark-color;
   font-weight: 600;
-  font-size: 2.2em;
+  font-size: 2.0em;
+  margin-top: 50px;
 }
 
 /* Hero Image */
@@ -383,6 +389,10 @@ footer p {
   align-items: center;
 }
 
+.footer-links a, .footer-links span {
+  margin: 10px 0;
+}
+
 .float-right {
   margin-left: auto;
 }
@@ -390,18 +400,19 @@ footer p {
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
-  body {
+  body, html, #container {
     overflow-x: hidden;
+    min-width: 400px;
   }
   h1, h2, h3 {
     text-align: center;
   }
   .nav-links {
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 0px;
     right: 0px;
     width: 100%;
-    height: 95vh;
+    height: 100%;
     background-color: $dark-color;
     display: flex;
     flex-direction: column;
@@ -409,24 +420,24 @@ footer p {
     justify-content: space-evenly;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    overflow-x: hidden;
   }
   .nav-links li {
     opacity: 0;
     width: 100%;
   }
-
   .nav-links li a {
     align-items: center;
     height: 15vh;
     justify-content: center;
   }
-
   .mobile-menu {
     display: block;
     cursor: pointer;
   }
   .nav-active {
     transform: translateX(0%);
+    overflow: hidden;
   }
   #hero {
     flex-direction: column;
@@ -436,6 +447,10 @@ footer p {
   }
   #content {
     flex-direction: column;
+    padding: 50px 0px;
+  }
+  article, .product {
+    margin: 50px;
   }
   .small-container, .events {
     width: 100%;
