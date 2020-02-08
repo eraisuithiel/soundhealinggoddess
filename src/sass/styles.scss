@@ -318,6 +318,11 @@ article {
 
 #contact-form button {
   font-size: 1em;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  color: $hover-color;
 }
 
 #submit-btn-container {
