@@ -18,7 +18,7 @@ ul {
 
 p {
   margin: 0 0 10px 0;
-  font-size: 0.8em;
+  font-size: 0.9em;
   line-height: 1.5em;
 }
 
@@ -141,7 +141,8 @@ a:hover {
 /* Logo */
 
 #logo {
-  height: 20vh;
+  height: 50vh;
+  min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,7 +271,7 @@ article {
 }
 
 .price {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: $price-color;
   margin-bottom: 15px;
   font-weight: bold;
