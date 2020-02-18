@@ -1,6 +1,6 @@
 # Readme
 
-[Website:](http://www.soundhealinggoddess.com/ "Sound Healing Goddess")
+[Website: www.soundhealinggoddess.com](http://www.soundhealinggoddess.com/ "Sound Healing Goddess")
 
 This 3 page site was created using HTML5, CSS3, SASS(SCSS) and JavaScript. It includes:
 
