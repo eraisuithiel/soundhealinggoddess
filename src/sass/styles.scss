@@ -1,6 +1,6 @@
-@import './_variables';
+@import "./_variables";
 
-/*  Core HTML */ 
+/*  Core HTML */
 
 * {
   margin: 0;
@@ -37,7 +37,9 @@ h3 {
   margin: 0px 0px 15px 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -48,10 +50,9 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   font-family: $main-font;
-
 }
 
-/*  Navigation */ 
+/*  Navigation */
 
 nav {
   display: flex;
@@ -72,7 +73,7 @@ nav {
 nav a {
   line-height: 50px;
   display: flex;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0px 25px;
   justify-content: center;
 }
@@ -107,7 +108,7 @@ a:hover {
 .mobile-menu div {
   width: 30px;
   height: 2px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 5px 0;
   transition: all 0.3s ease-in;
 }
@@ -115,7 +116,6 @@ a:hover {
 .mobile-menu:hover div {
   background-color: $hover-color;
 }
-
 
 @keyframes navLinkFade {
   from {
@@ -148,14 +148,14 @@ a:hover {
   align-items: center;
   color: $dark-color;
   font-weight: 600;
-  font-size: 2.0em;
+  font-size: 2em;
   margin-top: 50px;
 }
 
 /* Hero Image */
 
 #hero {
-  background-image: url(../img/star-bg-purple2.png);
+  background-image: url(../assets/images/star-bg-purple2.png);
   background-position: center;
   background-repeat: repeat-y;
   background-color: $dark-color;
@@ -187,7 +187,7 @@ a:hover {
 /* Buttons */
 
 .button {
-  color: #FFFFFF;
+  color: #ffffff;
   display: inline-block;
   padding: 15px 30px;
   border-radius: 5px;
@@ -202,7 +202,6 @@ a:hover {
 
 .more {
   background-color: $link-color;
-
 }
 
 .button-container {
@@ -307,7 +306,9 @@ article {
   color: $price-color;
 }
 
-#contact-form input, #contact-form textarea, #contact-form select {
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
   border: none;
   background-color: $text-color;
   padding: 8px;
@@ -398,7 +399,8 @@ footer p {
   align-items: center;
 }
 
-.footer-links a, .footer-links span {
+.footer-links a,
+.footer-links span {
   margin: 10px 0;
 }
 
@@ -409,11 +411,15 @@ footer p {
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
-  body, html, #container {
+  body,
+  html,
+  #container {
     overflow-x: hidden;
     min-width: 400px;
   }
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     text-align: center;
   }
   .nav-links {
@@ -458,10 +464,12 @@ footer p {
     flex-direction: column;
     padding: 50px 0px;
   }
-  article, .product {
+  article,
+  .product {
     margin: 50px;
   }
-  .small-container, .events {
+  .small-container,
+  .events {
     width: 100%;
     margin-right: 0px;
   }
@@ -482,4 +490,3 @@ footer p {
     width: 100%;
   }
 }
-

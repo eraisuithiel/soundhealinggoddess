@@ -1,74 +1,75 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-
-const path = require('path');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: "./src/js/index.js",
   output: {
-    path: path.join(__dirname, 'dist'),
-    publicPath: '/',
-    filename: 'js/[name].bundle.js'
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "public"),
+    assetModuleFilename: "assets/images/[name][ext]",
   },
+
+  devtool: "eval-source-map",
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    compress: true,
+    port: 9000,
+  },
+
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
         use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              esModule: false,
-              outputPath: 'img',
-              name: '[name].[ext]'
-            },
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-transform-runtime"],
           },
-        ],
-      },
-      {
-        test: /\.html$/,
-          use: [
-            {
-              loader: "html-loader",
-              options: { minimize: true }
-            }
-          ]
+        },
       },
       {
         test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
-      }
-    ]
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        type: "asset/resource",
+      },
+
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
+    ],
   },
+
+  resolve: {
+    extensions: ["*", ".js"],
+  },
+
   plugins: [
-    new HtmlWebPackPlugin({
+    new HtmlWebpackPlugin({
+      inject: "head",
       template: "./src/index.html",
-      filename: "./index.html",
+      filename: "index.html",
+      favicon: "./src/assets/favicon.ico",
     }),
-    new HtmlWebPackPlugin({
-      template: "./src/contact.html",
-      filename: "./contact.html",
-    }),
-    new HtmlWebPackPlugin({
+    new HtmlWebpackPlugin({
+      inject: "head",
       template: "./src/services.html",
-      filename: "./services.html",
+      filename: "services.html",
+      favicon: "./src/assets/favicon.ico",
     }),
-    new MiniCssExtractPlugin({
-      filename: "css/[name].css",
-      chunkFilename: "css/[id].css"
+    new HtmlWebpackPlugin({
+      inject: "head",
+      template: "./src/contact.html",
+      filename: "contact.html",
+      favicon: "./src/assets/favicon.ico",
     }),
-    new FaviconsWebpackPlugin('./src/img/logo.png')
-  ]
-}
+  ],
+};
