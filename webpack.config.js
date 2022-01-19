@@ -5,14 +5,14 @@ module.exports = {
   entry: "./src/js/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/images/[name][ext]",
   },
 
   devtool: "eval-source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.join(__dirname, "dist"),
     },
     compress: true,
     port: 9000,
