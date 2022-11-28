@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eraisuithiel/soundhealinggoddess.git"
+    "url": "https://github.com/fetchcat/soundhealinggoddess.git"
   },
   "babel": {
     "presets": [
@@ -18,29 +18,21 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-runtime": "^7.16.8",
-    "@babel/preset-env": "^7.16.4",
-    "async": "^3.2.3",
-    "babel-loader": "^8.2.3",
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.5.1",
-    "css-minimizer-webpack-plugin": "^3.2.0",
-    "file-loader": "^6.2.0",
-    "html-loader": "^3.1.0",
+    "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.7.2",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.4.5",
-    "minimist": "^1.2.6",
-    "node-forge": "^1.3.1",
-    "prettier-airbnb-config": "^1.0.0",
-    "sass": "^1.44.0",
-    "sass-loader": "^12.3.0",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
-    "webpack": "^5.64.4",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.6.0"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {}
 }
